@@ -1,5 +1,6 @@
 // from data.js
 var tableData = data;
+//console.log(tableData);
 
 // Add column names
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
