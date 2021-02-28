@@ -1,24 +1,24 @@
 // from data.js
 var tableData = data;
-console.log(tableData);
 
 // Add column names
-var columns = ["datetime", "city", "state", "country", "shape", "duration", "comments"]
+var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
 
 // Get a reference to the table body 
 var tbody = d3.select("tbody");
 
 // Values for each column
-tableData.forEach(function(ufoSighting) {
-    console.log(ufoSighting);
-    var row = tbody.append("tr");
-
-    Object.entries(ufoSighting).forEach(function([key, value]) {
-        console.log(key, value);
-        var cell = row.append("td");
-        cell.text(value);
+var loadData = (startData) => {
+    startData.forEach(function (ufoSighting) {
+        var row = tbody.append("tr");
+        columns.forEach(function(column) {
+            row.append("td").text(ufoSighting[column])
+        });
     });
-});
+}
+
+// Show table pre-filter
+loadData(tableData);
 
 // Create the button
 var button = d3.select("#filter-btn");
@@ -32,7 +32,7 @@ button.on("click", function () {
     console.log(`The total number of UFO sightings on ${inputValue} is: ${filteredData.length}`);
 
     if (filteredData.length != 0) {
-        tableData(filteredData);
+        loadData(filteredData);
     } else {
         tbody.append("tr").append("td").text("No data found for this date.");
     }
