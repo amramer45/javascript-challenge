@@ -66,5 +66,5 @@ var buttonReset = d3.select("#reset-btn");
 buttonReset.on("click", function () {
     tbody.html("");
     loadData(tableData);
-    console.log(`The total number of sightings currently in the database: ${data.length}`)
+    console.log(`The total number of sightings currently in the database: ${data.length}`);
 })
