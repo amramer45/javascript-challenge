@@ -31,6 +31,10 @@
           <aside class="filters">
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
+              <select id="selFilterType">
+                <option value="filterInclusive">Filter is inclusive</option>
+                <option value="filterExclusive">Filter is exclusive</option>
+              </select>
               <div class="panel-body">
                 <form>
                   <div class="form-group">
@@ -50,6 +54,8 @@
                     </ul>
                   </div>
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <p></p>
+                  <button id="reset-btn" type="button" class="btn btn-default">Reset Table</button>
                 </form>
               </div>
             </div>
