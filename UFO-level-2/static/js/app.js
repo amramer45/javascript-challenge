@@ -53,7 +53,7 @@ button.on("click", function () {
     console.log(filteredData);
 
     loadData(filteredData);
-    console.log(`The total number of UFO sightings on ${inputValue} is: ${filteredData.length}`);
+    console.log(`The total number of UFO sightings on ${inputDateValue} is: ${filteredData.length}`);
 
     if (filteredData.length != 0) {
         loadData(filteredData);
