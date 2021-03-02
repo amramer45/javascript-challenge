@@ -23,9 +23,14 @@ loadData(tableData);
 
 // Create the button
 var button = d3.select("#filter-btn");
+// Tell event listener what to do
 button.on("click", function () {
+    // Prevent page refresh
+    d3.event.preventDefault();
+    // Clear table
     tbody.html("");
 
+    // Select inputs and get raw HTML nodes
     var inputDateElement = d3.select("#datetime");
     var inputDateValue = inputDateElement.property("value").toLowerCase();
 
@@ -53,7 +58,9 @@ button.on("click", function () {
     console.log(filteredData);
 
     loadData(filteredData);
-    console.log(`The total number of UFO sightings on ${inputDateValue} is: ${filteredData.length}`);
+
+    //Show in console ufo sightings
+    console.log(`The total number of UFO sightings on is: ${filteredData.length}`);
 
     if (filteredData.length != 0) {
         loadData(filteredData);
@@ -62,9 +69,14 @@ button.on("click", function () {
     }
 });
 
+// Reset button
 var buttonReset = d3.select("#reset-btn");
+// Tell event listener what to do
 buttonReset.on("click", function () {
+    // Clear table
     tbody.html("");
+    // Reload table
     loadData(tableData);
+    // Show in console number of ufo sightings
     console.log(`The total number of sightings currently in the database: ${data.length}`);
 })
