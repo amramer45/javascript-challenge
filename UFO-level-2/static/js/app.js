@@ -26,8 +26,21 @@ var button = d3.select("#filter-btn");
 button.on("click", function () {
     tbody.html("");
 
-    var inputElement = d3.select("#input");
-    var inputValue = inputElement.property("value");
+    var inputDateElement = d3.select("#datetime");
+    var inputDateValue = inputDateElement.property("value").toLowerCase();
+
+    var inputCityElement = d3.select("#cityName");
+    var inputCityValue = inputCityElement.property("value").toLowerCase();
+
+    var inputStateElement = d3.select("#stateName");
+    var inputStateValue = inputStateElement.property("value").toLowerCase();
+
+    var inputCountryElement = d3.select("#countryName");
+    var inputCountryValue = inputCountryElement.property("value").toLowerCase();
+
+    var inputShapeElement = d3.select("#shapeType");
+    var inputShapeValue = inputShapeElement.property("value").toLowerCase();
+
     var filteredData = tableData.filter(sighting => sighting.datetime === inputValue ||
                                                     sighting.city === inputValue ||
                                                     sighting.state === inputValue ||
