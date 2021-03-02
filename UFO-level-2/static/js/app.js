@@ -41,22 +41,30 @@ button.on("click", function () {
     var inputShapeElement = d3.select("#shapeType");
     var inputShapeValue = inputShapeElement.property("value").toLowerCase();
 
-    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue ||
-                                                    sighting.city === inputValue ||
-                                                    sighting.state === inputValue ||
-                                                    sighting.country === inputValue ||
-                                                    sighting.shape === inputValue);
+    
+    // Filter data
+    var filteredData = tableData.filter(sighting => sighting.datetime === inputDateValue ||
+                                                    sighting.city === inputCityValue ||
+                                                    sighting.state === inputStateValue ||
+                                                    sighting.country === inputCountryValue ||
+                                                    sighting.shape === inputShapeValue);
 
     // console.log filter values  
     console.log(filteredData);
 
-    filteredData.forEach(function(selections) {
-        console.log(selections);
-        var row = tbody.append("tr");
-        Object.entries(selections).forEach(function([key, value]) {
-            console.log(key, value);
-            var cell = row.append("td");
-            cell.text(value);
-        });
-    });
+    loadData(filteredData);
+    console.log(`The total number of UFO sightings on ${inputValue} is: ${filteredData.length}`);
+
+    if (filteredData.length != 0) {
+        loadData(filteredData);
+    } else {
+        tbody.append("tr").append("td").text("No data found for this date.");
+    }
 });
+
+var buttonReset = d3.select("#reset-btn");
+buttonReset.on("click", function () {
+    tbody.html("");
+    loadData(tableData);
+    console.log(`The total number of sightings currently in the database: ${data.length}`)
+})
