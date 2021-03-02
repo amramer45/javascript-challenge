@@ -85,7 +85,7 @@ button.on("click", function () {
     // console.log(filteredData);
 
     //Show in console ufo sightings
-    console.log(`The total number of UFO sightings on is: ${filteredData.length}`);
+    console.log(`The total number of UFO sightings is: ${filteredData.length}`);
 
     // If function
     if (filteredData.length != 0) {
