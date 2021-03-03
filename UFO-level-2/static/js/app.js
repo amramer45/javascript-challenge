@@ -58,27 +58,27 @@ button.on("click", function () {
     console.log(filteredData);
                                                     
     // Apply filter, collect data to keep rows that return criteria
-    if (inputDateValue !== "" ) {
-        filteredData = filteredData.filter((ufoSightings) => ufoSightings.datetime === inputDateValue);
-    }
+    // if (inputDateValue !== "" ) {
+    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.datetime === inputDateValue);
+    // }
 
-    if (inputCityValue !== "" ) {
-        filteredData = filteredData.filter((ufoSightings) => ufoSightings.cityName === inputCityValue);
-    }
+    // if (inputCityValue !== "" ) {
+    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.cityName === inputCityValue);
+    // }
 
-    if (inputStateValue !== "" ) {
-        filteredData = filteredData.filter((ufoSightings) => ufoSightings.stateName === inputStateValue);
-    }
+    // if (inputStateValue !== "" ) {
+    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.stateName === inputStateValue);
+    // }
 
-    if (inputCountryValue !== "" ) {
-        filteredData = filteredData.filter((ufoSightings) => ufoSightings.countryName === inputStateValue);
-    }
+    // if (inputCountryValue !== "" ) {
+    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.countryName === inputStateValue);
+    // }
 
-    if (inputShapeValue !== "" ) {
-        filteredData = filteredData.filter((ufoSightings) => ufoSightings.shapeType === inputShapeValue);
-    }
+    // if (inputShapeValue !== "" ) {
+    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.shapeType === inputShapeValue);
+    // }
 
-    console.log(filteredData);
+    // console.log(filteredData);
 
     //Show in console date tried and number of sightings
     console.log(`The total number of UFO sightings is: ${filteredData.length}`);
