@@ -57,25 +57,25 @@ button.on("click", function () {
     
     console.log(filteredData);
                                                     
-    // Apply filter, collect data to keep rows that return criteria
+    // // Apply filter, collect data to keep rows that return criteria
     // if (inputDateValue !== "" ) {
-    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.datetime === inputDateValue);
+    //     filteredData = filteredData.filter((ufoSighting) => ufoSighting.datetime === inputDateValue);
     // }
 
     // if (inputCityValue !== "" ) {
-    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.cityName === inputCityValue);
+    //     filteredData = filteredData.filter((ufoSighting) => ufoSighting.cityName === inputCityValue);
     // }
 
     // if (inputStateValue !== "" ) {
-    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.stateName === inputStateValue);
+    //     filteredData = filteredData.filter((ufoSighting) => ufoSighting.stateName === inputStateValue);
     // }
 
     // if (inputCountryValue !== "" ) {
-    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.countryName === inputStateValue);
+    //     filteredData = filteredData.filter((ufoSighting) => ufoSighting.countryName === inputStateValue);
     // }
 
     // if (inputShapeValue !== "" ) {
-    //     filteredData = filteredData.filter((ufoSightings) => ufoSightings.shapeType === inputShapeValue);
+    //     filteredData = filteredData.filter((ufoSighting) => ufoSighting.shapeType === inputShapeValue);
     // }
 
     // console.log(filteredData);

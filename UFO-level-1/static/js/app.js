@@ -59,5 +59,5 @@ buttonReset.on("click", function () {
     // Reload the table
     loadData(tableData);
     //Show in console ufo sightings
-    console.log(`The total number of sightings currently in the database: ${data.length}`);
+    console.log(`The total number of UFO sightings currently in the database: ${data.length}`);
 })
